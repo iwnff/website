@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+@keyframes loaded {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: white;
+  overscroll-behavior: none;
+}
+
+#loading {
+  position: relative;
+  pointer-events: none;
+}
+
+.loading {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  opacity: 0;
+}
+
+.load {
+  font-family: 'inter-tight', sans-serif;
+  font-size: 50px;
+}
+
+.rotate-hint {
+  font-family: 'inter-tight', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.enter {
+  border-style: solid;
+  background-color: white;
+  font-family: 'inter-tight', sans-serif;
+  font-size: 50px;
+  padding: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-width: 5px;
+  border-color: #ff7f3f;
+}
+
+#rotate-hint, #enter, #icon-rotate-hint {
+  display: none;
+}
+
+.warning {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 20;
+}
+
+.loading, .warning {
+  height: 100dvh;
+}
+
+@media (max-width: 900px) {
+  .warning {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
