@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         await new Promise(r => setTimeout(r, 1000));
 
-        const res = await fetch("/main.html");
+        const res = await fetch("./main.html");
         const html = await res.text();
         loadingEl.style.animation = 'loaded 1s ease-in-out forwards';
         await new Promise(r => setTimeout(r, 1000));
