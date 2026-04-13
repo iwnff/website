@@ -229,6 +229,8 @@ function waitcanvas() {
     const beatdashpreview = loaders.load(base + 'beatdash.png')
     const unitypreview = loaders.load(base + 'unity.png')
     const godotpreview = loaders.load(base + 'godot.png')
+    document.getElementById('logomain').src = base + 'logo.svg';
+    document.querySelector('.navicon').src = base + 'logo.svg';
 
 
 
