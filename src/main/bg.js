@@ -402,9 +402,11 @@ function waitcanvas() {
     // scene.add(planelight);
 
 
-    
+    const base = import.meta.env.BASE_URL;
+
+
     const gltfLoader = new GLTFLoader()
-    gltfLoader.load('../../park_bench.glb', 
+    gltfLoader.load(base + 'park_bench.glb',
       function (gltf) {
         console.log(gltf)
         const park = gltf.scene;
@@ -427,7 +429,7 @@ function waitcanvas() {
         console.error(error);
       }
     )
-    gltfLoader.load('../../circular_table.glb', 
+    gltfLoader.load(base + 'circular_table.glb',
       function (gltf) {
         console.log(gltf)
         const table = gltf.scene;
@@ -451,7 +453,7 @@ function waitcanvas() {
       }
     )
 
-    gltfLoader.load('../../living_room.glb', 
+    gltfLoader.load(base + 'living_room.glb',
     function (gltf) {
       console.log(gltf)
       const living = gltf.scene;
@@ -475,7 +477,7 @@ function waitcanvas() {
     }
   )
 
-    gltfLoader.load('../../computer_desk.glb', 
+    gltfLoader.load(base + 'computer_desk.glb', 
     function (gltf) {
       console.log(gltf)
       const desk = gltf.scene;
@@ -499,7 +501,7 @@ function waitcanvas() {
     }
   )
 
-    gltfLoader.load('../../lamp.glb', 
+    gltfLoader.load(base + 'lamp.glb',
     function (gltf) {
       console.log(gltf)
       const lamp = gltf.scene;
@@ -610,7 +612,7 @@ function loadModel(path, callback) {
   }
 
   //banner
-  ttfloader.load('../InterTightRegular.ttf', (json) => {
+  ttfloader.load(base + 'InterTightRegular.ttf', (json) => {
     font = fontloader.parse(json)
     const text = createText(
     "Welcome to my website",
@@ -623,7 +625,7 @@ function loadModel(path, callback) {
   scene.add(text)
   })
 
-  ttfloader.load('../InterTightLight.ttf', (json) => {
+  ttfloader.load(base + 'InterTightLight.ttf', (json) => {
     font = fontloader.parse(json)
     const text = createText(
     "Perkenalkan Saya Iwan Firmansyah, Seorang\nprogammer dengan pengalaman dalam beberapa \nbidang salah satunya game development, website\ndevelopment dan 3D models. untuk melihat bagian\nlainnya anda bisa Scroll halaman website ini\n\n(Bagi Pengguna Mobile bisa menggunakan\nkontrol arah panah)",
@@ -637,7 +639,7 @@ function loadModel(path, callback) {
   })
 
   //about
-  ttfloader.load('../InterTightRegular.ttf', (json) => {
+  ttfloader.load(base + 'InterTightRegular.ttf', (json) => {
     font = fontloader.parse(json)
     const text = createText(
     "About me",
@@ -651,7 +653,7 @@ function loadModel(path, callback) {
   })
 
 
-  ttfloader.load('../InterTightLight.ttf', (json) => {
+  ttfloader.load(base + 'InterTightLight.ttf', (json) => {
     font = fontloader.parse(json)
     const text = createText(
     "Saya berumur 17 tahun yang mempunyai\nentusiasme tinggi dalam pengembangan\ndi bidang seperti Programming, 3D, &\nGame Development, Salah satunya\nPenggunaan Game engine seperti godot,\nUnity, Dan Construct 3, Dan Pembuatan\nGame Asset 3D menggunakan Program \nBlender. Dan pengembangan website\nyang memiliki aspek kreativitas\nseperti website portfolio saya",
@@ -665,7 +667,7 @@ function loadModel(path, callback) {
   })
 
     //about2
-  ttfloader.load('../InterTightRegular.ttf', (json) => {
+  ttfloader.load(base + 'InterTightRegular.ttf', (json) => {
     font = fontloader.parse(json)
     const text = createText(
     "Achivements",
@@ -678,7 +680,7 @@ function loadModel(path, callback) {
   scene.add(text)
   })
 
-  ttfloader.load('../InterTightLight.ttf', (json) => {
+  ttfloader.load(base + 'InterTightLight.ttf', (json) => {
     font = fontloader.parse(json)
     const text = createText(
     "Disini adalah bagian untuk\nmemperlihatkan pencapaian saya\n\nPemenang Olimpiade Bahasa Inggris\nTingkat Nasional HISNO 2023\n\nPemenang LKS Tingkat Kota bidang\n'IT Software Solution For\nBusiness'\n\n(Pencet Gambar untuk melihatnya)",
@@ -724,7 +726,7 @@ function loadModel(path, callback) {
   scene.add(text)
   })
 
-  ttfloader.load('../InterTightLight.ttf', (json) => {
+  ttfloader.load(base + 'InterTightLight.ttf', (json) => {
     font = fontloader.parse(json)
     const text = createText(
     "Berikut adalah Proyek\nYang saya buat, saya\ntelah memilih 3 proyek\nyang saya pilih sebagai\npaling terbaik dari\nkarir saya.\n\nJika ingin mengetahui\nlagi mengenai proyek-\nproyek yang saya buat\nbisa kontak saya.\n\n(klik gambar untuk\nmelihat videonya)",
@@ -781,7 +783,7 @@ function loadModel(path, callback) {
   scene.add(text)
   })
 
-  ttfloader.load('../InterTightLight.ttf', (json) => {
+  ttfloader.load(base + 'InterTightLight.ttf', (json) => {
     font = fontloader.parse(json)
     const text = createText(
     "Sertifikat-sertifikat\nyang saya raih dari\nberbagai sumber\nPerusahaan, Kursus\nonline, & Lomba\nAtau Kompetisi\nLainnya\n\n(Klik gambar\nuntuk melihat\nSertifikat)",
@@ -855,7 +857,7 @@ function loadModel(path, callback) {
   cpp.userData.baseZ = cpp.position.z
 
   //Contact
-  ttfloader.load('../InterTightRegular.ttf', (json) => {
+  ttfloader.load(base + 'InterTightRegular.ttf', (json) => {
     font = fontloader.parse(json)
     const text = createText(
     "Contact",
@@ -868,7 +870,7 @@ function loadModel(path, callback) {
   scene.add(text)
   })
 
-  ttfloader.load('../InterTightLight.ttf', (json) => {
+  ttfloader.load(base + 'InterTightLight.ttf', (json) => {
     font = fontloader.parse(json)
     const text = createText(
     "Anda bisa menghubungi saya melewati\nNomer HP: 088989909211\nEmail: firmansyahiwan0438@gmail.com\n\nTerima kasih sudah mengunjungi website\nSaya!",
@@ -909,37 +911,37 @@ function loadModel(path, callback) {
       }
 
       if (object.name == "hisno") {
-        window.open('../../peraihhisno.jpeg', '_blank')
+        window.open(base + 'peraihhisno.jpeg', '_blank')
       }
       if (object.name == "lks2") {
-        window.open('../../peraihlksjuara2.jpeg', '_blank')
+        window.open(base + 'peraihlksjuara2.jpeg', '_blank')
       }
       if (object.name == "construct") {
-        window.open('../../sertifikatconstruct.jpeg', '_blank')
+        window.open(base + 'sertifikatconstruct.jpeg', '_blank')
       }
       if (object.name == "cpp") {
-        window.open('../../sertifikatcpp.jpeg', '_blank')
+        window.open(base + 'sertifikatcpp.jpeg', '_blank')
       }
       if (object.name == "csharp") {
-        window.open('../../sertifikatcsharp.jpeg', '_blank')
+        window.open(base + 'sertifikatcsharp.jpeg', '_blank')
       }
       if (object.name == "gamelab") {
-        window.open('../../sertifikatgamelab.jpeg', '_blank')
+        window.open(base + 'sertifikatgamelab.jpeg', '_blank')
       }
       if (object.name == "pesertalks") {
-        window.open('../../sertifikatpesertalks.jpeg', '_blank')
+        window.open(base + 'sertifikatpesertalks.jpeg', '_blank')
       }
       if (object.name == "python") {
-        window.open('../../sertifikatpython.jpeg', '_blank')
+        window.open(base + 'sertifikatpython.jpeg', '_blank')
       }
       if (object.name == "beatdash") {
-        window.open('../../beatdash.mp4', '_blank')
+        window.open(base + 'beatdash.mp4', '_blank')
       }
       if (object.name == "unity") {
-        window.open('../../unity.mp4', '_blank')
+        window.open(base + 'unity.mp4', '_blank')
       }
       if (object.name == "godot") {
-        window.open('../../godot.mp4  ', '_blank')
+        window.open(base + 'godot.mp4', '_blank')
       }
     }
   }
