@@ -36,6 +36,7 @@ function waitcanvas() {
   let iscameraAnimating = false;
   let lastScrollTimeDelay = 0;
   let isEnglishLanguange = false;
+  const base = import.meta.env.BASE_URL;
 
 
   const raycaster = new THREE.Raycaster()
@@ -214,19 +215,20 @@ function waitcanvas() {
     // ball.position.set(0, 6.5, 0)
 
     const loaders = new THREE.TextureLoader();
-    const bg = loaders.load('../../bg.png')
-    const peraihHisno = loaders.load('../../peraihhisno.jpeg')
-    const peraihLKSJuara2 = loaders.load('../../peraihlksjuara2.jpeg')
+    const bg = loaders.load(base + 'bg.png')
+    const peraihHisno = loaders.load(base + 'peraihhisno.jpeg')
+    const peraihLKSJuara2 = loaders.load(base + 'peraihlksjuara2.jpeg')
 
-    const sertifikatconstruct = loaders.load('../../sertifikatconstruct.jpeg')
-    const sertifikatcpp = loaders.load('../../sertifikatcpp.jpeg')
-    const sertifikatcsharp = loaders.load('../../sertifikatcsharp.jpeg')
-    const sertifikatgamelab = loaders.load('../../sertifikatgamelab.jpeg')
-    const sertifikatpesertalks = loaders.load('../../sertifikatpesertalks.jpeg')
-    const sertifikatpython = loaders.load('../../sertifikatpython.jpeg')
-    const beatdashpreview = loaders.load('../../beatdash.png')
-    const unitypreview = loaders.load('../../unity.png')
-    const godotpreview = loaders.load('../../godot.png')
+    const sertifikatconstruct = loaders.load(base + 'sertifikatconstruct.jpeg')
+    const sertifikatcpp = loaders.load(base + 'sertifikatcpp.jpeg')
+    const sertifikatcsharp = loaders.load(base + 'sertifikatcsharp.jpeg')
+    const sertifikatgamelab = loaders.load(base + 'sertifikatgamelab.jpeg')
+    const sertifikatpesertalks = loaders.load(base + 'sertifikatpesertalks.jpeg')
+    const sertifikatpython = loaders.load(base + 'sertifikatpython.jpeg')
+
+    const beatdashpreview = loaders.load(base + 'beatdash.png')
+    const unitypreview = loaders.load(base + 'unity.png')
+    const godotpreview = loaders.load(base + 'godot.png')
 
 
 
@@ -400,9 +402,6 @@ function waitcanvas() {
     // planelight.position.set(20, 10, 30)
     // planelight.rotation.y = Math.PI / 7
     // scene.add(planelight);
-
-
-    const base = import.meta.env.BASE_URL;
 
 
     const gltfLoader = new GLTFLoader()
@@ -713,7 +712,7 @@ function loadModel(path, callback) {
   lks2.userData.baseY = lks2.position.y
   lks2.userData.baseZ = lks2.position.z
   //projects
-  ttfloader.load('../InterTightRegular.ttf', (json) => {
+  ttfloader.load(base + 'InterTightRegular.ttf', (json) => {
     font = fontloader.parse(json)
     const text = createText(
     "My projects",
@@ -770,7 +769,7 @@ function loadModel(path, callback) {
   godot.userData.baseZ = godot.position.z
 
   //Certificates
-  ttfloader.load('../InterTightRegular.ttf', (json) => {
+  ttfloader.load(base + 'InterTightRegular.ttf', (json) => {
     font = fontloader.parse(json)
     const text = createText(
     "Certificates",
