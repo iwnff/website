@@ -1,0 +1,86 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/main/mainstyle.css"/>
+    <link rel="icon" type="image/svg+xml" href="/src/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/main.js"></script>
+    <title>qlufotera's website</title>
+  </head>
+  <body> 
+<div class="openanim">
+  <img src="./src/logo.svg" alt="logo" width="90px" id="logomain"/>
+  <h1 class="logotext">Welcome</h1>
+</div>
+
+<nav>
+  <div class="navbar">
+    <span class="navitem" id="home">
+      <img src="./src/logo.svg" alt="home" width="40px" class="navicon"/>
+    </span>
+
+    <span class="navitem" id="seperator">
+      <div class="navseperator"></div>
+    </span>
+
+    <span class="navitem" id="about">
+      <button class="navbutton" data-target="about">About</button>
+    </span>
+
+    <span class="navitem" id="projects">
+      <button class="navbutton" data-target="desc">Projects</button>
+    </span>
+
+    <span class="navitem" id="contact">
+      <button class="navbutton" data-target="projects">Contact</button>
+    </span>
+  </div>
+</nav>
+
+<main>
+  <div class="maincontent">
+    <canvas id="bgmain"></canvas>
+  </div>
+
+  <div class="section" id="banner"></div>
+  <div class="section" id="about"></div>
+  <div class="section" id="desc"></div>
+  <div class="section" id="history"></div>
+  <div class="section" id="videogames"></div>
+  <div class="section" id="projects"></div>
+
+  <footer>
+    <div class="footer">
+      <p class="footertext">© 2026 iwan firmansyah</p>
+    </div>
+  </footer>
+</main>
+
+<script>
+  document.querySelectorAll('[data-target]').forEach(trigger => {
+    trigger.addEventListener('click', function() {
+      const targetId = this.getAttribute('data-target');
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        const offset = 80;
+        console.log("Yeah it moved");
+
+        const top =
+          targetElement.getBoundingClientRect().top +
+          window.scrollY -
+          offset;
+
+        window.scrollTo({
+          top: top,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
+  </body>
+</html>
